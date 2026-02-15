@@ -61,7 +61,8 @@ func main() {
 	repo := flag.String("repo", "", "GitHub repo (owner/repo)")
 	token := flag.String("token", "", "GitHub token (or GITHUB_TOKEN env)")
 	days := flag.Int("days", 7, "Lookback window in days")
-	outFmt := flag.String("format", "table", "Output: table|json")
+	outFmt := flag.String("format", "table", "Output: table|json|markdown")
+
 	flag.Parse()
 	if *repo == "" {
 		fmt.Fprintln(os.Stderr, "Usage: buildburn -repo owner/repo [-token TOKEN] [-days 7]")
